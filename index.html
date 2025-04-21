@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Affordable and professional web design, marketing & consulting services." />
+  <title>Modern Business Services</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Cookie Banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <p>We use cookies to improve your experience. By using our site, you accept our cookie policy.</p>
+    <button onclick="document.getElementById('cookieBanner').style.display='none'">Accept</button>
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="hero">
+    <div class="hero-content">
+      <img src="logo.png" alt="Business Logo" class="logo" />
+      <h1>Grow Your Business with Us</h1>
+      <p>Web Design | Marketing | Consulting</p>
+      <a href="#services" class="btn">See Services</a>
+    </div>
+  </header>
+
+  <!-- Services Section -->
+  <section id="services" class="fade-in">
+    <h2>Our Services</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://source.unsplash.com/300x200/?website" alt="Web Design">
+        <h3>🖥️ Web Design</h3>
+        <p>From <strong>£50</strong></p>
+        <p>Custom websites that work on all devices.</p>
+        <a href="#plans" class="btn">See Plans</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/300x200/?seo,marketing" alt="Marketing">
+        <h3>📈 Marketing</h3>
+        <p>From <strong>£75</strong></p>
+        <p>Boost your presence online with digital ads and SEO.</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/300x200/?consulting" alt="Consulting">
+        <h3>🧠 Consulting</h3>
+        <p>From <strong>£60</strong></p>
+        <p>Expert advice for scaling and growth strategies.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Website Plans Section -->
+  <section id="plans">
+    <h2>Website Design Plans</h2>
+    <div class="plans">
+      <div class="plan">
+        <h3>Basic Plan</h3>
+        <p>From <strong>£50</strong></p>
+        <p>Ideal for personal blogs or portfolios.</p>
+        <ul>
+          <li>1 Page</li>
+          <li>Responsive Design</li>
+          <li>Basic SEO</li>
+        </ul>
+        <a href="#contact" class="btn">Get Started</a>
+      </div>
+      <div class="plan">
+        <h3>Standard Plan</h3>
+        <p>From <strong>£150</strong></p>
+        <p>For small businesses or e-commerce sites.</p>
+        <ul>
+          <li>Up to 5 Pages</li>
+          <li>Responsive Design</li>
+          <li>SEO & Analytics</li>
+          <li>E-commerce Integration</li>
+        </ul>
+        <a href="#contact" class="btn">Get Started</a>
+      </div>
+      <div class="plan">
+        <h3>Premium Plan</h3>
+        <p>From <strong>£300</strong></p>
+        <p>For large businesses or complex websites.</p>
+        <ul>
+          <li>Unlimited Pages</li>
+          <li>Custom Design</li>
+          <li>Advanced SEO</li>
+          <li>Full E-commerce</li>
+          <li>Dedicated Support</li>
+        </ul>
+        <a href="#contact" class="btn">Get Started</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <details>
+        <summary>How long does it take to build a website?</summary>
+        <p>Usually 1–2 weeks depending on features and content.</p>
+      </details>
+      <details>
+        <summary>Can I request updates after launch?</summary>
+        <p>Yes! We offer maintenance and support packages.</p>
+      </details>
+      <details>
+        <summary>Do you help with domain names and hosting?</summary>
+        <p>Yes, we can guide you or handle it for you entirely.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p class="contact-message">Want to work with us? Send us a message below:</p>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+    <div class="map">
+      <iframe src="https://maps.google.com/maps?q=London&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section class="newsletter">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Get tips and offers directly in your inbox.</p>
+    <form>
+      <input type="email" placeholder="Enter your email" />
+      <button type="submit" class="btn">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Modern Business. All rights reserved.</p>
+  </footer>
+
+  <!-- Floating Contact Button -->
+  <a href="https://wa.me/447123456789" target="_blank" class="floating-btn">💬 Chat</a>
+
+  <!-- Back to Top Button -->
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="top-btn">↑</button>
+
+  <script>
+    // Scroll fade-in animations
+    const fadeElements = document.querySelectorAll('.fade-in');
+    window.addEventListener('scroll', () => {
+      fadeElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+          el.classList.add('visible');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
